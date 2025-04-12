@@ -54,7 +54,7 @@
           </div>
         </div>
           <p>Tanpa mengurangi rasa hormat, dengan ini kami akan melangsungkan pernikahan, dan kami mengundang Bapak/Ibu/Saudara/I untuk dapat menjadi bagian dari acara dan momen terindah kami.</p>
-        <a href="#home" class="btn btn-lg mt-4" onClick="enableScroll()"> <b class="bi-envelope-heart-fill">  Buka Undangan</b></a>
+        <a href="#home" class="btn btn-lg mt-4"> <b class="bi-envelope-heart-fill">  Buka Undangan</b></a>
       </div>
     </div>
   </div>
@@ -408,20 +408,6 @@
   const song = document.querySelector('#song');
   let isPlaying = false;
 
-  function disableScroll() {
-    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-
-    window.onscroll = function () {
-      window.scrollTo(scrollTop, scrollLeft);
-    }
-
-    rootElement.style.scrollBehavior = 'auto';
-  }
-
-  function enableScroll() {
-    window.onscroll = function () { }
-    rootElement.style.scrollBehavior = 'smooth';
     // localStorage.setItem('opened', 'true');
     playAudio();
   }
@@ -449,7 +435,7 @@
   // if (!localStorage.getItem('opened')) {
   //   disableScroll();
   // }
-  disableScroll();
+  
 </script>
 <script>
   window.addEventListener("load", function () {
