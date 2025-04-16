@@ -329,9 +329,9 @@
               <table class="table">
                 <thead>
                   <tr>
+                    <th>Waktu</th>
                     <th>Nama</th>
                     <th>Ucapan</th>
-                    <th>Waktu Kirim</th>
                   </tr>
                 </thead>
                 <tbody id="body-result">
@@ -612,11 +612,10 @@
             var element = data.data[i];
             var no = i + 1;
             tbody += `<tr>
-                      <td>` + (no) + `</td>
+                      <td>` + element.timestamp + `</td>
                       <td>` + element.name + `</td>
                       <td>` + element.comment + `</td>
-                      <td>` + element.timestamp + `</td>
-                  </tr>`;
+                      </tr>`;
           }
 
           $('#body-result').html(tbody)
