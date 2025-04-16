@@ -329,33 +329,12 @@
               <table class="table">
                 <thead>
                   <tr>
-
                     <th>Name</th>
                     <th>Comment</th>
                     <th>Date</th>
                   </tr>
                 </thead>
                 <tbody id="body-result">
-                  <tr>
-                    <td>oke</td>
-                    <td>ajah</td>
-                    <td>10 jam, 55 menit lalu</td>
-                  </tr>
-                  <tr>
-                    <td>test</td>
-                    <td>TEST</td>
-                    <td>11 jam, 22 menit lalu</td>
-                  </tr>
-                  <tr>
-                    <td>Hilman</td>
-                    <td>Hello Word</td>
-                    <td>10 jam, 29 menit lalu</td>
-                  </tr>
-                  <tr>
-                    <td>Ilham Samsul Arifin</td>
-                    <td>Hmmmm</td>
-                    <td>10 jam, 5 menit lalu</td>
-                  </tr>
                 </tbody>
               </table>
 
@@ -613,12 +592,44 @@
           btnKirim.classList.toggle('d-none');
           myAlert.classList.toggle('d-none');
           form.reset();
-          // getData()
+          getData()
         })
         .catch(error => console.error('Error!', error.message))
     })
 
     // https://github.com/jamiewilson/form-to-google-sheets
+
+
+    function getData() {
+      $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycbwMkEiUooIrxN-YsV_7NzYrG8g8NK2-VX_1iH406PngIaPyQpWx610AFl5dVZ7wPehr/exec',
+        method: 'GET', // POST
+        data: {},
+        dataType: 'json', // json
+        success: function (data) {
+          // console.log(data);
+          var tbody = '';
+          for (var i = 0; i < data.data.length; i++) {
+            var element = data.data[i];
+            var no = i + 1;
+            tbody += `<tr>
+                      <td>` + (no) + `</td>
+                      <td>` + element.name + `</td>
+                      <td>` + element.comment + `</td>
+                      <td>` + element.timestamp + `</td>
+                  </tr>`;
+          }
+
+          $('#body-result').html(tbody)
+        },
+        beforeSend: function () {
+          $('#body-result').html('<h3 class="mt-3 text-danger">Cerita nya loading..</h3>')
+        },
+        complete: function () {},
+      });
+    }
+
+    getData()
   </script>
 </body>
 
