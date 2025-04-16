@@ -612,7 +612,7 @@
             var element = data.data[i];
             var no = i + 1;
             tbody += `<tr>
-                      <td>` + formatHariDanJam(element.timestamp)+ `</td>
+                      <td>` + waktuRelatif(element.timestamp)+ `</td>
                       <td>` + element.name + `</td>
                       <td>` + element.comment + `</td>
                       </tr>`;
@@ -629,23 +629,21 @@
 
     getData()
 
-    function formatHariDanJam(isoString) {
-      const date = new Date(isoString);
+    function waktuRelatif(isoString) {
+      const sekarang = new Date();
+      const waktu = new Date(isoString);
     
-      // Array nama hari dalam Bahasa Indonesia
-      const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+      const selisihMs = sekarang - waktu;
     
-      const hari = namaHari[date.getUTCDay()];
-      
-      // Ambil jam dan menit, sesuaikan dengan zona waktu lokal jika perlu
-      const jam = date.getUTCHours().toString().padStart(2, '0');
-      const menit = date.getUTCMinutes().toString().padStart(2, '0');
+      const selisihJam = Math.floor(selisihMs / (1000 * 60 * 60));
+      const hari = Math.floor(selisihJam / 24);
+      const jam = selisihJam % 24;
     
-      return `${hari}, ${jam}:${menit}`;
+      return `${hari} hari, ${jam} jam lalu`;
     }
-
     
   </script>
+  
 </body>
 
 </html>
