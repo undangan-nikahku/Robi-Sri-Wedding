@@ -612,7 +612,7 @@
             var element = data.data[i];
             var no = i + 1;
             tbody += `<tr>
-                      <td>` + element.timestamp + `</td>
+                      <td>` + formatHariDanJam(element.timestamp)+ `</td>
                       <td>` + element.name + `</td>
                       <td>` + element.comment + `</td>
                       </tr>`;
@@ -621,13 +621,30 @@
           $('#body-result').html(tbody)
         },
         beforeSend: function () {
-          $('#body-result').html('<h3 class="mt-3 text-danger">Cerita nya loading..</h3>')
+          $('#body-result').html('<h3 class="mt-3 text-danger">Loading..</h3>')
         },
         complete: function () {},
       });
     }
 
     getData()
+
+    function formatHariDanJam(isoString) {
+      const date = new Date(isoString);
+    
+      // Array nama hari dalam Bahasa Indonesia
+      const namaHari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+    
+      const hari = namaHari[date.getUTCDay()];
+      
+      // Ambil jam dan menit, sesuaikan dengan zona waktu lokal jika perlu
+      const jam = date.getUTCHours().toString().padStart(2, '0');
+      const menit = date.getUTCMinutes().toString().padStart(2, '0');
+    
+      return `${hari}, ${jam}:${menit}`;
+    }
+
+    
   </script>
 </body>
 
