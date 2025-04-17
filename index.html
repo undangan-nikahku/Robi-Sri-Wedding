@@ -40,7 +40,11 @@
             <div class="col-md-8 col-6">
               <div class="card text-center text-bg-light mb-5">
                 <div class="card-header">
+<<<<<<< HEAD
                   <h3>Minggu<br>22 Juni 2025</h3>
+=======
+                  <h1>Minggu<br>22 Juni 2025</h1>
+>>>>>>> 024a36786b978fc0bd252a833ec1a76afe2bc3a1
                 </div>
               </div>
             </div>
@@ -257,7 +261,11 @@
               <div class="row justify-content-center">
                 <div class="col-md-6">
                   <span>No. Rekening</span>
+<<<<<<< HEAD
                   <br><span><b>1310 0226 7052 7</b></span>
+=======
+                  <br><span><b>13100 22670 527</b></span>
+>>>>>>> 024a36786b978fc0bd252a833ec1a76afe2bc3a1
                 </div>
                 <div class="col-md-6">
                   <span>Nama Rekening</span>
@@ -274,7 +282,11 @@
               <div class="row justify-content-center">
                 <div class="col-md-6">
                   <span>No. Rekening</span>
+<<<<<<< HEAD
                   <br><span><b>1730 0117 4107 2</b></span>
+=======
+                  <br><span><b>17300 11741 072</b></span>
+>>>>>>> 024a36786b978fc0bd252a833ec1a76afe2bc3a1
                 </div>
                 <div class="col-md-6">
                   <span>Nama Rekening</span>
@@ -296,6 +308,7 @@
           <h2>Ungkapan dan Doa</h2>
           <p>Tinggalkan kami doa terbaik anda untuk momen bahagia kami</p>
         </div>
+<<<<<<< HEAD
       </div>
       <div class="row justify-content-center mt-4">
         <div class="col-md-10 col-10">
@@ -371,6 +384,57 @@
     </div>
   </section>
 
+=======
+      </div>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-10 col-10">
+          <div class="card text-left text-bg-light mb-5">
+            <div class="card-body">
+              <div class="alert alert-success alert-dismissible fade show d-none my-alert" role="alert">
+                <strong>Terima Kasih!</strong> Ucapan anda telah kami terima.
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Tutup"></button>
+              </div>
+              <form method="post" name="form-comment">
+                <div class="mb-2">
+                  <label for="name">Nama</label>
+                  <input type="text" id="name" name="name" class="form-control">
+                </div>
+                <div class="mb-2">
+                  <label for="comment">Ucapan</label>
+                  <textarea id="comment" name="comment" class="form-control"></textarea>
+                </div>
+
+                <button type="submit" id="button" class="btn btn-primary btn-kirim bi bi-send-fill"> Kirim</button>
+
+                <button class="btn btn-danger btn-loading d-none" type="button" disabled="">
+                  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Loading...
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th>Waktu</th>
+                    <th>Nama</th>
+                    <th>Ucapan</th>
+                  </tr>
+                </thead>
+                <tbody id="body-result">
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+>>>>>>> 024a36786b978fc0bd252a833ec1a76afe2bc3a1
   <!-- slide tujuh -->
   <section id="gifts" class="gifts">
     <div class="container">
@@ -469,10 +533,13 @@
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-    crossorigin="anonymous"></script>
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
   <script>
     simplyCountdown('.simply-countdown', {
@@ -481,9 +548,18 @@
       day: 22, // required
       hours: 8, // Default is 0 [0-23] integer
       words: { //words displayed into the countdown
-        days: { singular: 'hari', plural: 'hari' },
-        hours: { singular: 'jam', plural: 'jam' },
-        minutes: { singular: 'menit', plural: 'menit' },
+        days: {
+          singular: 'hari',
+          plural: 'hari'
+        },
+        hours: {
+          singular: 'jam',
+          plural: 'jam'
+        },
+        minutes: {
+          singular: 'menit',
+          plural: 'menit'
+        },
       },
     });
   </script>
@@ -499,7 +575,6 @@
     offcanvas.addEventListener('hidden.bs.offcanvas', function () {
       stickyTop.style.overflow = 'hidden';
     });
-
   </script>
 
   <script>
@@ -521,7 +596,11 @@
     }
 
     function enableScroll() {
+<<<<<<< HEAD
       window.onscroll = function () { }
+=======
+      window.onscroll = function () {}
+>>>>>>> 024a36786b978fc0bd252a833ec1a76afe2bc3a1
       rootElement.style.scrollBehavior = 'smooth';
       // localStorage.setItem('opened', 'true');
       playAudio();
@@ -560,14 +639,21 @@
         const data = new FormData(form);
         const action = e.target.action;
         fetch(action, {
+<<<<<<< HEAD
           method: 'POST',
           body: data,
         })
+=======
+            method: 'POST',
+            body: data,
+          })
+>>>>>>> 024a36786b978fc0bd252a833ec1a76afe2bc3a1
           .then(() => {
             alert("Konfirmasi kehadiran berhasil terkirim!");
           })
       });
     });
+<<<<<<< HEAD
 
   </script>
   <script>
@@ -579,6 +665,99 @@
 
     document.querySelector('#nama').value = nama;
   </script>
+=======
+  </script>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const nama = urlParams.get('n') || '';
+    const pronoun = urlParams.get('p') || 'Bapak/Ibu/Saudara/i';
+    const namaContainer = document.querySelector('.hero h4 span');
+    namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ',');
+
+    document.querySelector('#nama').value = nama;
+  </script>
+
+  <script>
+    const scriptURL =
+      'https://script.google.com/macros/s/AKfycbwYTujwEPkGQOzhcbgiaWm_BTqze9ONP6ddc6zce8Nb1tp-cCtEvBBnz6ZILNBjXrzb/exec'
+    const form = document.forms['form-comment'];
+
+    const btnKirim = document.querySelector('.btn-kirim');
+    const btnLoading = document.querySelector('.btn-loading');
+    const myAlert = document.querySelector('.my-alert');
+
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      // ketika tombol submit di klik
+      // tampilkan tombol loading, hilangkan tombol kirim
+      btnLoading.classList.toggle('d-none');
+      btnKirim.classList.toggle('d-none');
+      // kalau ada class d-none maka hilangkan, kalau gak ada maka tambahkan
+      fetch(scriptURL, {
+          method: 'POST',
+          body: new FormData(form)
+        })
+        .then(response => {
+          // tampilkan tombol kirim,hilangkan tombol loading
+          console.log('Success!', response);
+          btnLoading.classList.toggle('d-none');
+          btnKirim.classList.toggle('d-none');
+          myAlert.classList.toggle('d-none');
+          form.reset();
+          getData()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+
+    // https://github.com/jamiewilson/form-to-google-sheets
+
+
+    function getData() {
+      $.ajax({
+        url: 'https://script.google.com/macros/s/AKfycbwMkEiUooIrxN-YsV_7NzYrG8g8NK2-VX_1iH406PngIaPyQpWx610AFl5dVZ7wPehr/exec',
+        method: 'GET', // POST
+        data: {},
+        dataType: 'json', // json
+        success: function (data) {
+          // console.log(data);
+          var tbody = '';
+          for (var i = 0; i < data.data.length; i++) {
+            var element = data.data[i];
+            var no = i + 1;
+            tbody += `<tr>
+                      <td>` + waktuRelatif(element.timestamp)+ `</td>
+                      <td>` + element.name + `</td>
+                      <td>` + element.comment + `</td>
+                      </tr>`;
+          }
+
+          $('#body-result').html(tbody)
+        },
+        beforeSend: function () {
+          $('#body-result').html('<h3 class="mt-3 text-danger">Loading..</h3>')
+        },
+        complete: function () {},
+      });
+    }
+
+    getData()
+
+    function waktuRelatif(isoString) {
+      const sekarang = new Date();
+      const waktu = new Date(isoString);
+    
+      const selisihMs = sekarang - waktu;
+    
+      const selisihJam = Math.floor(selisihMs / (1000 * 60 * 60));
+      const hari = Math.floor(selisihJam / 24);
+      const jam = selisihJam % 24;
+    
+      return `${hari} hari, ${jam} jam lalu`;
+    }
+    
+  </script>
+  
+>>>>>>> 024a36786b978fc0bd252a833ec1a76afe2bc3a1
 </body>
 
 </html>
